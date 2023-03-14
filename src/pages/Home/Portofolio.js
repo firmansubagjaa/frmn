@@ -1,31 +1,66 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+
 
 export default function Portofolio() {
+  const [data, setData] = useState([
+    {
+      id: 1,
+      title: 'BreezeCof',
+      Description: 'My first project where the website was inspired by the largest startup in Indonesia, which has a service to order food and drinks using "Ojek Online" as a delivery medium from producers to consumers. here I got an idea to create a website called "BreezeCof", where one of the coffee shops wants to have an independent website without cooperation with third parties.',
+      images: require('../../assets/img/png/breezeCof.png'),
+      website: 'https://breezecof-fe.vercel.app/'
+    },
+    {
+      id: 2,
+      title: 'Hiring App',
+      Description: 'This second project I was not alone to develop this website but developed with the project team. The purpose of this website has an idea like other job portal websites but with the advantage of getting Talent who has good competence and is recognized nationally who still has difficulty getting a job. So this website was developed.',
+      images: require('../../assets/img/png/hiring-app.jpg'),
+      website: 'https://breezecof-fe.vercel.app/',
+    },
+    {
+      id: 3,
+      title: 'Fazzpay',
+      Description: 'This third project, I created a website where in everyday life, we have the desire to save money with the aim of each of us, it could be for long-term investment, saving to have an item that has been dreamed of but is always difficult because it is always reduced and used money, so I created a website in the form of an e-wallet with the aim of saving money.',
+      images: require('../../assets/img/png/breezeCof.png'),
+      website: 'https://breezecof-fe.vercel.app/'
+    }
+  ])
+
+  const scrollRef = useRef(null)
+
   return (
-    <section id='portofolio' className='flex justify-center items-center'>
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ root: scrollRef }}
+      transition={{ duration: 0.7, backIn: [0.17, 0.67, 0.83, 0.67] }}
+      id='portofolio' className='flex justify-center items-center'>
       <div className="">
         <div className="container">
-          <div className="mt-40 flex-col lg:flex-row">
+          <div className="mt-12 flex-col lg:flex-row">
             <div className=''>
-              <div className="my-10 leading-loose">
-                <h1 className="text-5xl font-bold">Portofolio</h1>
+              <div className="my-10">
+                <h1 className="text-5xl font-bold -ml-1">Portofolio</h1>
                 <p className='py-1 font-semibold'>Making projects happen. Specializing in project consultation and management <br /> to deliver quality results. Let's make it happen!</p>
               </div>
               <div className="flex flex-col lg:flex-row my-24">
-                {[1, 2, 3].map(() => {
+                {data.map((items) => {
                   return (
-                    <>
-                      <div className="card w-full bg-base-100 shadow-xl">
-                        <figure><img src={require('../../assets/img/png/portofolio1.jpg')} alt="Portofolio" /></figure>
+                    <div key={items.id} className="lg:mr-5">
+                      <div className="card w-full bg-base-100 shadow-xl mb-6 ">
+                        <figure><img src={items.images} alt="Portofolio" className='h-48 w-full object-cover' /></figure>
                         <div className="card-body">
-                          <h2 className="card-title">Hiring App</h2>
-                          <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, corporis magni voluptatem harum culpa nisi beatae debitis obcaecati cum. Exercitationem totam autem minima architecto nam cupiditate atque nesciunt distinctio placeat.</p>
+                          <h2 className="card-title">{items.title}</h2>
+                          <p className='text-justify'>{items.Description}</p>
                           <div className="card-actions justify-end my-10">
-                            <button className="btn btn-primary btn-block rounded-full shadow-primary shadow-2xl">Buy Now</button>
+                            <a href={items.website} className='w-full'>
+                              <button className="btn btn-primary btn-block rounded-full shadow-primary shadow-2xl">Go to Website</button>
+                            </a>
                           </div>
                         </div>
                       </div>
-                    </>
+                    </div>
                   )
                 })}
               </div>
@@ -34,6 +69,6 @@ export default function Portofolio() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

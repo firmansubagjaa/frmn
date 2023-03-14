@@ -10,12 +10,12 @@ export default function About() {
       viewport={{ root: scrollRef }}
       transition={{ duration: 0.7, backIn: [0.17, 0.67, 0.83, 0.67] }}
       className="container">
-      <div className="hero flex my-64 flex-col lg:flex-row">
+      <div className="hero flex items-center my-64 flex-col lg:flex-row">
         <motion.img
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          src={require('../../assets/img/png/wisuda.jpg')} className="max-w-sm md:max-w-md lg:max-w-lg rounded-lg shadow-2xl object-cover" alt="Firman Subagja" />
-        <div id='about' className='pl-0 lg:pl-10'>
+          src={require('../../assets/img/png/wisuda.jpg')} className="max-w-[90vw] md:max-w-md lg:max-w-lg rounded-lg shadow-2xl object-cover" alt="Firman Subagja" />
+        <div id='about' className='pl-0 lg:pl-10 mt-14'>
           <h1 className="text-5xl font-bold"> <Typewriter
             options={{
               strings: [`About Me`],
