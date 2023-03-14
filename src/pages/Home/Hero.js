@@ -23,7 +23,7 @@ export default function Hero() {
               <div className="mt-12 lg:mt-0">
                 <fieldset className='border-2 border-solid border-primary bg-primary w-48 lg:w-60'></fieldset>
                 <div className='-mt-4 w-75 lg:w-96 text-end'>
-                  <h2 className='uppercase text-primary font-semibold'>firman subagja</h2>
+                  <h2 className='uppercase text-primary font-bold'>firman subagja</h2>
                 </div>
                 {/* <div className='border-2 border-solid border-primary w-72'></div> */}
               </div>
