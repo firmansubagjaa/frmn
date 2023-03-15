@@ -22,9 +22,23 @@ export default function Portofolio() {
       id: 3,
       title: 'Fazzpay',
       Description: 'This third project, I created a website where in everyday life, we have the desire to save money with the aim of each of us, it could be for long-term investment, saving to have an item that has been dreamed of but is always difficult because it is always reduced and used money, so I created a website in the form of an e-wallet with the aim of saving money.',
-      images: require('../../assets/img/png/breezeCof.png'),
+      images: require('../../assets/img/png/fazzpay.png'),
       website: 'https://breezecof-fe.vercel.app/'
-    }
+    },
+    {
+      id: 4,
+      title: 'Tickitz',
+      Description: 'This project with other talents made a project team, by designing a website where users can order tickets without having to come to the counter at the movie venue and can book tickets in advance. This project was created using NextJS technology as a framework for ReactJS and on the Backend using NodeJS using the ExpressJS framework library.',
+      images: require('../../assets/img/png/Ticktitz.png'),
+      website: 'https://tickitz-stringify.vercel.app/'
+    },
+    {
+      id: 4,
+      title: 'Firman Portfolio',
+      Description: 'Everything about Firman Subagja, we can see on hes portfolio website starts from the journey before and will be someone who will have a career in the field of Front-End Web Developer.',
+      images: require('../../assets/img/png/portfolio.jpeg'),
+      website: 'https://frmn.vercel.app/'
+    },
   ])
 
   const scrollRef = useRef(null)
@@ -44,12 +58,12 @@ export default function Portofolio() {
                 <h1 className="text-5xl font-bold -ml-1">Portofolio</h1>
                 <p className='py-1 font-semibold'>Making projects happen. Specializing in project consultation and management <br /> to deliver quality results. Let's make it happen!</p>
               </div>
-              <div className="flex flex-col lg:flex-row my-24">
+              <div className="flex flex-wrap justify-center items-center my-24">
                 {data.map((items) => {
                   return (
                     <div key={items.id} className="lg:mr-5">
-                      <div className="card w-full bg-base-100 shadow-xl mb-6 ">
-                        <figure><img src={items.images} alt="Portofolio" className='h-48 w-full object-cover' /></figure>
+                      <div className="card w-80 h-screen bg-base-100 shadow-xl mb-6 ">
+                        <figure className='h-screen'><img src={items.images} alt="Portofolio" className='h-56 w-full object-cover' /></figure>
                         <div className="card-body">
                           <h2 className="card-title">{items.title}</h2>
                           <p className='text-justify'>{items.Description}</p>
