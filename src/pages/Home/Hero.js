@@ -1,6 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
+import HTML from "../../assets/img/svg/html.svg"
+import CSS from "../../assets/img/svg/css3.svg"
+import JavaScript from "../../assets/img/svg/javascript.svg"
+import Tailwind from "../../assets/img/svg/tailwind.svg"
+import Reactlogo from "../../assets/img/svg/React.svg"
 
 export default function Hero() {
   return (
@@ -35,8 +40,25 @@ export default function Hero() {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="btn btn-primary rounded-full btn-wide shadow-primary shadow-2xl">Resume CV</motion.button>
+                  className="btn btn-primary rounded-full btn-block lg:btn-wide shadow-primary shadow-2xl">Resume CV</motion.button>
               </a>
+              <div className="flex flex-wrap justify-center lg:justify-start mt-12">
+                <div className=''>
+                  <img src={HTML} alt="HTML" className='h-16' />
+                </div>
+                <div className=''>
+                  <img src={CSS} alt="HTML" className='h-16' />
+                </div>
+                <div className=''>
+                  <img src={JavaScript} alt="HTML" className='h-16' />
+                </div>
+                <div className=''>
+                  <img src={Tailwind} alt="HTML" className='h-16' />
+                </div>
+                <div className=''>
+                  <img src={Reactlogo} alt="HTML" className='h-16' />
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
