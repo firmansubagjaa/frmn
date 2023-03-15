@@ -32,8 +32,16 @@ export default function Hero() {
                 </div>
                 {/* <div className='border-2 border-solid border-primary w-72'></div> */}
               </div>
-              <h1 className="text-3xl lg:text-5xl font-bold w-full pr-28">
-                Creative Thinker Minimalism Lover
+              <h1 className="text-3xl lg:text-5xl font-bold w-full pr-0 md:pr-28"
+              >
+                {/* <Typewriter
+                  options={{
+                    strings: [`Create Thinker`, `Minimalism Classy`,],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                /> */}
+                Create Thinker Minimalism Classy
               </h1>
               <p className='py-6'>Passionate about crafting beautiful digital experiences with HTML, CSS and Javascript. Always on the lookout for new challenges and learning opportunities.</p>
               <a href="https://drive.google.com/file/d/18QE210WUOaUHDx4900JrKp77p7RZfYxr/view?usp=sharing">
