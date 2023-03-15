@@ -16,14 +16,14 @@ export default function Portofolio() {
       title: 'Hiring App',
       Description: 'This second project I was not alone to develop this website but developed with the project team. The purpose of this website has an idea like other job portal websites but with the advantage of getting Talent who has good competence and is recognized nationally who still has difficulty getting a job. So this website was developed.',
       images: require('../../assets/img/png/hiring-app.jpg'),
-      website: 'https://breezecof-fe.vercel.app/',
+      website: 'https://hiring-apps-fe.vercel.app/',
     },
     {
       id: 3,
       title: 'Fazzpay',
       Description: 'This third project, I created a website where in everyday life, we have the desire to save money with the aim of each of us, it could be for long-term investment, saving to have an item that has been dreamed of but is always difficult because it is always reduced and used money, so I created a website in the form of an e-wallet with the aim of saving money.',
       images: require('../../assets/img/png/fazzpay.png'),
-      website: 'https://breezecof-fe.vercel.app/'
+      website: 'https://fazzpay-fe-beta.vercel.app/'
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ export default function Portofolio() {
       website: 'https://tickitz-stringify.vercel.app/'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Firman Portfolio',
       Description: 'Everything about Firman Subagja, we can see on hes portfolio website starts from the journey before and will be someone who will have a career in the field of Front-End Web Developer.',
       images: require('../../assets/img/png/portfolio.jpeg'),
